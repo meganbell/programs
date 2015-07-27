@@ -1,0 +1,46 @@
+
+
+<center><h1></h1></center>
+
+<div class="jumbotron planets-photo">
+    	<h1 class="animated bounceInRight">Planets</h1>
+    	
+    </div>
+
+
+<center>
+<table class="table table-hover">
+	<tbody class="table table-header">
+
+		<tr>
+			<th>Name</th>
+			<th>Climate</th>
+			<th>Gravity</th>
+			<th>Terrain</th>
+			<th>Population</th>
+			
+
+		</tr>	
+			<% @results.each do |planet| %>
+				<tr>
+					<td> <%= planet["name"] %> </td>
+					<td> <%= planet["climate"] %> </td>
+					<td> <%= planet["gravity"] %> </td>
+					<td> <%= planet["terrain"] %> </td>
+					<td> <%= planet["population"] %> </td>
+					
+				</tr>
+				<% end %>
+	</tbody>
+
+</table>
+
+</center>
+<img src="http://i.ytimg.com/vi/odmvYDXwhpg/maxresdefault.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
+
+
+
+
+<footer class="container-fluid" >
+	<p>&copy; Wookie Works 2015</p>

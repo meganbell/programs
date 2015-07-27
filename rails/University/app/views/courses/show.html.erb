@@ -1,0 +1,53 @@
+
+
+
+
+
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Course Details</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <dl class="dl-horizontal">
+        <dt>Title</dt>
+        <dd><%= @course.title %></dd>
+        <dt>Number</dt>
+        <dd><%= @course.number %></dd>
+        <dt>Credits</dt>
+        <dd><%= @course.credits %></dd>
+        <dt>Students Enrolled</dt>
+        <dd>
+          <table class="table">
+          	<thead>
+          		<tr class= "row">
+          			<th>Course Name</th>
+          			<th>Student</th>
+          			<th></th>
+          			<th>Grade</th>
+          		</tr>
+          	</thead>
+          	<tbody>
+          		<% @enrollments.each do |enrollment| %>
+          		<tr class= "row">
+          			<td><%= enrollment.course.title %></td>
+                    <td> <%= enrollment.student.first_name %></td>
+                <td><%= enrollment.student.last_name %></td>
+          			<td><%= enrollment.grade %></td>
+          		</tr>
+          		<% end %>
+          	</tbody>
+            
+            </table>
+           </dd>
+      </dl>
+  </div>
+</div>
+<div class= "panel-footer">
+	<%= link_to 'Edit', edit_course_path(@course),:class => "btn-primary btn-sm" %>
+	<%= link_to 'Back', courses_path,:class => "btn-primary btn-sm" %>
+</div>
+</div>
+
+<img src="http://d3lp4xedbqa8a5.cloudfront.net/s3/digital-cougar-assets/Cosmo/2015/05/26/53152/Cat-Typing.gif" />

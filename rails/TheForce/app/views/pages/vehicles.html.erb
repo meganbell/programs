@@ -1,0 +1,46 @@
+
+
+<center><h1></h1></center>
+
+<div class="jumbotron vehicles-photo">
+    	<h1 class="animated bounceInRight">Vehicles</h1>
+    	
+    </div>
+
+
+<center>
+<table class="table table-hover">
+	<tbody class="table table-header">
+
+		<tr>
+			<th>Name</th>
+			<th>Class</th>
+			<th>Length</th>
+			<th>Crew</th>
+			<th>Passengers</th>
+			
+
+		</tr>	
+			<% @results.each do |vehicle| %>
+				<tr>
+					<td> <%= vehicle["name"] %> </td>
+					<td> <%= vehicle["vehicle_class"] %> </td>
+					<td> <%= vehicle["length"] %> </td>
+					<td> <%= vehicle["crew"] %> </td>
+					<td> <%= vehicle["passengers"] %> </td>
+					
+				</tr>
+				<% end %>
+	</tbody>
+
+</table>
+
+</center>
+<img src="http://www.lynkformer.com/template/blog/2012/02/trooper-log-7-12.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
+
+
+
+
+<footer class="container-fluid" >
+	<p>&copy; Wookie Works 2015</p>

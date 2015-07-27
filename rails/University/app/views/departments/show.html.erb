@@ -1,0 +1,48 @@
+
+
+
+
+<p id="notice"><%= notice %></p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Department Details</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd><%= @department.name %></dd>
+        <dt>Budget</dt>
+        <dd><%= @department.budget %></dd>
+        <dt>Start Date</dt>
+        <dd><%= @department.start_date %></dd>
+        <dt>Courses</dt>
+        <dd>
+          <table class="table">
+          	<thead>
+          		<tr class= "row">
+          			<th>Course Title</th>
+          			<th>Credits</th>
+          		</tr>
+          	</thead>
+          	<tbody>
+          		<% @courses.each do |course| %>
+          		<tr class= "row">
+          			<td><%= course.title %></td>
+          			<td><%= course.credits %></td>
+          		</tr>
+          		<% end %>
+          	</tbody>
+            
+            </table>
+           </dd>
+      </dl>
+  </div>
+</div>
+<div class= "panel-footer">
+	<%= link_to 'Edit', edit_department_path(@department),:class => "btn-primary btn-sm" %>
+	<%= link_to 'Back', departments_path,:class => "btn-primary btn-sm" %>
+</div>
+</div>
+
+<img src="http://media.giphy.com/media/IW7oZF4MGJsfS/giphy.gif" />

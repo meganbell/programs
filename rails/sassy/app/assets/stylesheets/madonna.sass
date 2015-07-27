@@ -1,0 +1,27 @@
+// Place all the styles related to the Madonna controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$primary-color: #336699
+$secondary-color: #108B26
+$font-stack: Arial, Helvetica, sans-serif
+$width: 200px
+
+=border-radius($radius)
+	-webkit-border-radius: $radius
+	-moz-border-radius: $radius
+	-ms-border-radius: $radius
+	border-radius: $radius
+
+.box
+	+border-radius(10px)
+	background: rgba($primary-color, 0.5)
+
+h1
+	color: $primary-color + $secondary-color
+
+ul
+	li
+		width: $width / 2
+		font-family: $font-stack
+		a
+			color: $secondary-color

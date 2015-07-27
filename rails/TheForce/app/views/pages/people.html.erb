@@ -1,0 +1,62 @@
+
+
+<center><h1></h1></center>
+
+<div class="jumbotron people-photo">
+    	<h1 class="animated bounceInRight">People of The Force</h1>
+    	
+    </div>
+
+
+<center>
+<table class="table table-hover">
+	<tbody class="table table-header">
+
+
+
+		<tr>
+			<th>name</th>
+			<th>height</th>
+			<th>mass</th>
+			<th>birth year</th>
+			<th>skin color</th>
+			<th>eye color</th>
+			<th>gender</th>
+
+		</tr>	
+			<% @results.each do |person| %>
+				<tr>
+					<td> <%= person["name"] %> </td>
+					<td> <%= person["height"] %> </td>
+					<td> <%= person["mass"] %> </td>
+					<td> <%= person["birth_year"] %> </td>
+					<td> <%= person["hair_color"] %> </td>
+					<td> <%= person["skin_color"] %> </td>
+					<td> <%= person["gender"] %> </td>
+				</tr>
+				<% end %>
+	</tbody>
+
+</table>
+
+</center>
+
+
+<div class="wrapper">
+	<img src="http://thenypost.files.wordpress.com/2014/09/starwars3.jpg" alt="Responsive image">
+	<div class="overlay">
+		<h2>Copy Here</h2>
+</div>
+</div>
+
+
+
+<BR>
+<img src="https://danhairfield.files.wordpress.com/2012/03/starwars2.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
+
+
+
+
+<footer class="container-fluid" >
+	<p>&copy; Wookie Works 2015</p>

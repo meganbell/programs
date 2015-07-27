@@ -1,0 +1,47 @@
+
+
+<center><h1></h1></center>
+
+<div class="jumbotron species-photo">
+    	<h1 class="animated bounceInRight">Species</h1>
+    	
+    </div>
+
+
+<center>
+<table class="table table-hover">
+	<tbody class="table table-header">
+
+		<tr>
+			<th>Name</th>
+			<th>Classification</th>
+			<th>Average Height</th>
+			<th>Lifespan</th>
+			<th>Language</th>
+
+		</tr>	
+			<% @results.each do |species| %>
+				<tr>
+					<td> <%= species["name"] %> </td>
+					<td> <%= species["classification"] %> </td>
+					<td> <%= species["average_height"] %> </td>
+					<td> <%= species["average_lifespan"] %> </td>
+					<td> <%= species["language"] %> </td>
+					
+				</tr>
+				<% end %>
+	</tbody>
+
+</table>
+
+</center>
+<img src="http://a.dilcdn.com/bl/wp-content/uploads/sites/6/2015/02/Yoda2-2400x1200-929786430764.jpg" class="img-responsive img-rounded" alt="Responsive image">
+<BR>
+<img src="https://danhairfield.files.wordpress.com/2012/03/starwars2.jpg" class="img-responsive img-rounded" alt="Responsive image">
+
+
+
+
+
+<footer class="container-fluid" >
+	<p>&copy; Wookie Works 2015</p>

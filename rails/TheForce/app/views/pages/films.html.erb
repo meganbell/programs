@@ -1,0 +1,44 @@
+
+
+<center><h1></h1></center>
+
+<div class="jumbotron films-photo">
+    	<h1 class="animated bounceInRight">Films</h1>
+    	
+    </div>
+
+
+<center>
+<table class="table table-hover">
+	<tbody class="table table-header">
+
+		<tr>
+			<th>Title</th>
+			<th>Director</th>
+			<th>Release Date</th>
+			<th>Species</th>
+		
+
+		</tr>	
+			<% @results.each do |film| %>
+				<tr>
+					<td> <%= film["title"] %> </td>
+					<td> <%= film["director"] %> </td>
+					<td> <%= film["release_date"] %> </td>
+					<td> <% film["species"].each do |species| %> </td>
+ 						<td><%= JSON.parse(open(species).read)["name"] %></td>
+					<% end %>
+				</tr>
+				<% end %>
+	</tbody>
+
+</table>
+
+</center>
+
+
+
+
+
+<footer class="container-fluid" >
+	<p>&copy; Wookie Works 2015</p>
