@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tack.name %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@tack.image_url, "width" => 200) if @tack.image.present? %>
+</p>
+
+<p>
+  <strong>Board:</strong>
+  <%= @tack.board_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @tack.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_tack_path(@tack) %> |
+<%= link_to 'Back', tacks_path %>
