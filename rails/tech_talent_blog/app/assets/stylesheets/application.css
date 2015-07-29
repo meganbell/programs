@@ -24,13 +24,19 @@ p {
 	text-align: left;
 }
 
-html {
-    background: #FFFFCC;
+body {
+    background: #4F3C8D;
 }
 
-.row {
-	background: #FFFFCC;
+.container {
+	background-color: rgba(255, 255, 255, .4);
+	margin-top: 25px;
+	margin-bottom: 25px;
+	padding-bottom: 10px;
+	border-radius: 10px;
 }
+
+
 
 
 
@@ -41,4 +47,19 @@ h1 {
 	font-family: 'Pacifico', cursive;
 	border: 0px;
 	border-radius: 150px;
+	padding: 25px;
+}
+
+.btn:visited {
+	color: white;
+	}
+
+
+.btn-teal {
+	background-color: rgb(0, 128, 128);
+}
+
+.btn-teal:hover {
+		background-color: rgb(0, 105, 105);
+
 }
