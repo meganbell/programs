@@ -7,7 +7,7 @@
 </div>
 
 <div class="panel-body">
-<p>by <%= @blog_post.author %></p>
+<p>by <%= @blog_post.user.name %></p>
 <p><%= @blog_post.blog_entry %> </p>
 </div>
 
@@ -28,7 +28,7 @@
 </div>
 <% @blog_post.comments.each do |comment| %>
 <div class="panel-body">
-	<p><strong><%= comment.author %></strong> said: </p>
+	<p><strong><%= comment.user.name %></strong> said: </p>
 	<p><%= comment.comment_entry %></p>
 	<p>at:</p>
 	<p><%= comment.updated_at %></p>

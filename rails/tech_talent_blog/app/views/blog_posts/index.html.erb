@@ -1,4 +1,4 @@
-<h1>  Current Blog Posts</h1>
+<h1>     The Daily Read </h1>
 <div class="row">
 <% @blog_posts.each do |blog_post| %>
 <div class="col-md-6">
@@ -7,12 +7,16 @@
       <%= link_to blog_post.title, blog_post %>
     </div>
     <div class="panel-body">
-      by <%= blog_post.author %> on <%= blog_post.created_at.strftime('%b %dth, %Y %I:%M %P') %><br />
+      by <%= link_to blog_post.user.name, user_posts_path(id:blog_post.user.id) %> on <%= blog_post.created_at.strftime('%b %dth, %Y %I:%M %P') %><br />
       <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
     </div>
     <div class="panel-footer">
+      <% if signed_in? %>
+      <% if current_user.id == blog_post.user.id %>
 <%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-teal" %>
 <%= link_to 'Destroy', blog_post, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+    <% end %>
+    <% end %>
     </div>
 
 </div>
@@ -21,11 +25,12 @@
 
 </div>
 <% end %>
-</di>
+</div>
 
 
 
 
 <br>
 
-<%= link_to 'New Blog post', new_blog_post_path, class: "btn btn-primary" %>
+
+

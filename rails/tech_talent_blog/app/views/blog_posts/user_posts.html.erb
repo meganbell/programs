@@ -1,0 +1,37 @@
+<h1>     <%= @user.name %>'s Page </h1>
+
+
+
+<% @user.blog_posts.each do |blog_post| %>
+<div class="col-md-6">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <%= link_to blog_post.title, blog_post %>
+    </div>
+
+    <div class="panel-body">
+      by <%= blog_post.user.name %> on <%= blog_post.created_at.strftime('%b %dth, %Y %I:%M %P') %><br />
+      <p><%= blog_post.blog_entry[0..250] %>...[<%= link_to "READ MORE", blog_post %>]</p>
+    </div>
+    <div class="panel-footer">
+    	<% if sign_in? %>
+      <% if current_user.id == @user.id %>
+<%= link_to 'Edit', edit_blog_post_path(blog_post), class: "btn btn-teal" %>
+<%= link_to 'Destroy', blog_post, method: :delete, data: {confirm: 'Are you sure?'}, class: "btn btn-danger" %>
+    <% end %>
+    <% end %>
+    </div>
+
+</div>
+</div>
+
+
+
+<% end %>
+</div>
+
+
+
+
+
+
