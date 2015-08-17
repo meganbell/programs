@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Oauthy</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+
+	<% if person_signed_in? %>
+	Signed in as <%= current_person.username %>. Not you?
+	<%= link_to "Sign Out", destroy_person_session_path, :method => :delete %>
+	<% else %>
+	<%= link_to "Sign in with Facebook", person_omniauth_authorize_path(:facebook) %>
+	<% end %>
+
+	<p>Facebook APPID: <%= ENV['FACEBOOK_APPID'] %> </p>
+	<p>Facebook KEY: <%= ENV['FACEBOOK_KEY'] %></p>
+
+<%= yield %>
+
+</body>
+</html>

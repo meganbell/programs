@@ -1,0 +1,56 @@
+<h1>My Personal Weather Lookup</h1>
+
+
+
+It is <%= @weather_lookup.temperature %> degrees in Washington, DC!
+<%= image_tag @weather_lookup.icon %>
+
+
+<div class = "row">
+    <div class = "col-md-6 col-md-offset-3">
+        <div class = "well">
+            <h1>Look up your local forecast </h1>
+           
+                    <p><em>What's the weather like in your city?</em></p>
+                <div>
+                        <%= form_tag root_path do %>
+                        <%= text_field_tag :city, all, placeholder: "City name" %>
+                        <%= select_tag :state, options_for_select(@states), :prompt => "please select"%>
+                        <%= submit_tag "Check weather" %>
+                </div>
+                    
+                </div>
+          
+    </div>    
+</div>
+<% end %>
+
+<div class = "row">
+    <div class = "col-md-6 col-md-offset-3">
+        <div class = "well">
+            <h1>Welcome To <%= @location %>!</h1>
+            <div class = "row">
+                <div class = "col-md-7">
+                    <p><em>What's the weather like?</em></p>
+                    <p>
+                        Temperature is: <%= @temp_f %>° / <%= @temp_c %>° C 
+                    </p>
+                    <p>
+                        Feels like: <%= @real_feel %>° F
+                    </p>
+                </div>    
+                <div class = "col-md-5">
+                    <p>
+                       <%= @weather_words%> <%= image_tag @weather_icon%> 
+                    </p>
+                    <p>
+                        <%=link_to "Full Forecast", @forecast_link, target: "_blank" %>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+
+
+
