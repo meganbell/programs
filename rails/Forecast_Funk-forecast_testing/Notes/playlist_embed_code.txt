@@ -1,0 +1,21 @@
+Indie Pop!
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A2ikvjqFDwalfKdCHkxn79O" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Deathcore
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A1aFz02MTZPGjgTovXGm2xw" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Deep Dark Indie Folk
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A7BuKs6kgNMx2fwF01WphOD" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Melancholia
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A1rg0arh9uWqGOYH7gEtQ6a" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Acoustic Covers
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A0UHbhCjKlXnFfv98bKrtKv" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Feel Good
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Asonymusicnl%3Aplaylist%3A11dmFZe33fvcHr0Xn5E9HS" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
+Teen Pop!
+<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3Aspotify%3Aplaylist%3A445ES7sgFV8zJHebmbUW0L" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+
